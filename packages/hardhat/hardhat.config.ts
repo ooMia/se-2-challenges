@@ -10,9 +10,9 @@ import "@nomicfoundation/hardhat-verify";
 import "hardhat-deploy";
 import "hardhat-deploy-ethers";
 
-const providerApiKey = process.env.ALCHEMY_API_KEY;
-const deployerPrivateKey = process.env.DEPLOYER_PRIVATE_KEY;
-const etherscanApiKey = process.env.ETHERSCAN_API_KEY;
+const providerApiKey = process.env.ALCHEMY_API_KEY!;
+const deployerPrivateKey = process.env.DEPLOYER_PRIVATE_KEY!;
+const etherscanApiKey = process.env.ETHERSCAN_API_KEY!;
 
 const config: HardhatUserConfig = {
   defaultNetwork: "sepolia",
