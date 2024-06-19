@@ -57,8 +57,5 @@
     "type-fest": "^4.6.0",
     "typescript": "^5.1.6",
     "vercel": "^32.4.1"
-  },
-  "engines": {
-    "node": ">=18.17.0"
   }
 }
