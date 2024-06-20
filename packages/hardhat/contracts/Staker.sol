@@ -1,11 +1,10 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.4; //Do not change the solidity version as it negativly impacts submission grading
+pragma solidity 0.8.4;
 
 // +--------+
 // | import |
 // +--------+
 
-// import "hardhat/console.sol";
 import "./ExampleExternalContract.sol";
 
 // +-----------+
@@ -35,11 +34,11 @@ abstract contract _Staker is IStaker {
 	// | Function (public) |
 	// +-------------------+
 
-	// Collect funds in a payable `stake()` function and track individual `balances` with a mapping:
-	// Make sure to emit `Stake(address,uint256)` event for the frontend `All Stakings` tab to display
+	// Collect funds and track individual `balances` with a mapping
+	// This emit `Stake(address,uint256)` event for the frontend `All Stakings` tab to display
 	function stake() public payable virtual;
 
-	// Add a `timeLeft()` view function that returns the time left before the deadline for the frontend
+	// Returns the time left before the deadline for the frontend
 	function timeLeft() public view virtual returns (uint256);
 }
 
@@ -60,7 +59,6 @@ contract Staker is _Staker {
 	// | Event |
 	// +-------+
 
-	// Make sure to add a `Stake(address,uint256)` event and emit it for the frontend `All Stakings` tab to display)
 	event Stake(address indexed staker, uint256 amount);
 
 	// +-------+
