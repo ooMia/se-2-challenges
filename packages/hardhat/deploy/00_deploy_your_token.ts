@@ -1,6 +1,6 @@
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { DeployFunction } from "hardhat-deploy/types";
-// import { Contract } from "ethers";
+import { Contract } from "ethers";
 
 /**
  * Deploys a contract named "YourToken" using the deployer account and
@@ -31,9 +31,6 @@ const deployYourToken: DeployFunction = async function (hre: HardhatRuntimeEnvir
     // automatically mining the contract deployment transaction. There is no effect on live networks.
     autoMine: true,
   });
-
-  // Get the deployed contract
-  // const yourToken = await hre.ethers.getContract<Contract>("YourToken", deployer);
 };
 
 export default deployYourToken;
