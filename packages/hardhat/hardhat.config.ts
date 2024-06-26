@@ -15,7 +15,7 @@ const deployerPrivateKey = process.env.DEPLOYER_PRIVATE_KEY!;
 const etherscanApiKey = process.env.ETHERSCAN_API_KEY!;
 
 const config: HardhatUserConfig = {
-  defaultNetwork: "localhost",
+  defaultNetwork: "sepolia",
   solidity: {
     version: "0.8.17",
     settings: {
